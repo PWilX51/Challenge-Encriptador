@@ -1,4 +1,4 @@
-#Decodificador y codificador de texto
+## Decodificador y codificador de texto
 
 Esta aplicacion decodifica texto y lo codifica con el metodo dado a continuacion:
 
