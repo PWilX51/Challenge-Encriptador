@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Decodificar</title>
+</head>
+<body>
+    <div class="notification_copy inactive">Copiado en el cortapapeles</div>
+    <img class="logo" src="img/Logo.png" alt="Alura">
+    <div class="container" id="container">
+        <div class="codificado" id="codificado">
+            <textarea type="text" id="texto_decode" placeholder="Ingresa un texto aqui" pattern="\w"></textarea>
+            <footer>Solo letras minúsculas y sin acentos</footer>
+            <div class="buttons">
+                <button id="encriptar_btn" class="encriptar_btn">Encriptar</button>
+                <button id="desencriptar_btn" class="desencriptar_btn">Desencriptar</button>
+            </div>
+        </div>
+        <div class="decodificar" id="decodificar">
+            <div class="no_executed">
+                <img src="img/Muñeco.png" alt="Muñeco">
+                <h1>Ningún mensaje fue encontrado</h1>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
