@@ -4,7 +4,7 @@ const btnEncriptar = document.getElementById("encriptar_btn");
 const btnDesencriptar = document.getElementById("desencriptar_btn");
 
 function encriptar(msg){
-    let newMsg=msg.replaceAll('a', 'ai').replaceAll('e', 'enter').replaceAll('u', 'ufat').replaceAll('i', 'imes').replaceAll('o', 'ober');
+    let newMsg=msg.replace(/e/gi, 'enter').replace(/i/gi, 'imes').replace(/a/gi, 'ai').replace(/u/gi, 'ufat').replace(/o/gi, 'ober');
     console.log(newMsg);
     return newMsg;
 }
@@ -19,10 +19,12 @@ function mostrarResultado(modo){
     if(textarea.value!=="")
         {
             decodificado.innerHTML=`
-            <div class="textoD" id="textoD">
-                <p>${modo==="encriptar" ? encriptar(textarea.value) : desencriptar(textarea.value)}</p>
-            </div>
-            <button class="copiar" id="copiar">Copiar</button>`;
+            <div class="containerDe">
+                <div class="textoD" id="textoD">
+                    <p>${modo==="encriptar" ? encriptar(textarea.value) : desencriptar(textarea.value)}</p>
+                </div>
+                <button class="copiar" id="copiar">Copiar</button>
+            </div>`;
             
             
             const texto = document.getElementById("textoD").innerText;
